@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomizationsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewCustomizeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Customize"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCheeseHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Cheese"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCustomizeHeader"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupCheese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:checkedButton="@+id/rb_female"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCheeseHeader">
+
+            <RadioButton
+                android:id="@+id/radioButtonCheeseOption1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="No Cheese"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCheeseHeader" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCheeseOption2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="American"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCheeseHeader" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCheeseOption3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="Cheddar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCheeseHeader" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCheeseOption4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="Pepper Jack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCheeseHeader" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCheeseOption5"
+                android:layout_width="238dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:text="Provolone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioButtonCheeseOption4" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewToppingsHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Toppings"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupCheese"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="135dp"
+            android:layout_height="204dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.311"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewToppingsHeader">
+
+            <CheckBox
+                android:id="@+id/checkboxToppings1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lettuce" />
+
+            <CheckBox
+                android:id="@+id/checkboxToppings2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tomato" />
+
+            <CheckBox
+                android:id="@+id/checkboxToppings3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pickles" />
+
+            <CheckBox
+                android:id="@+id/checkboxToppings4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Onions" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonAddToOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Add to Order"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.652"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

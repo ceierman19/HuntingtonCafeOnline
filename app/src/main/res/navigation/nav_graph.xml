@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.huntingtoncafeonline.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_grillFragment"
+            app:destination="@id/grillFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/grillFragment"
+        android:name="com.example.huntingtoncafeonline.GrillFragment"
+        android:label="fragment_grill"
+        tools:layout="@layout/fragment_grill" >
+        <action
+            android:id="@+id/action_grillFragment_to_customizationsFragment"
+            app:destination="@id/customizationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customizationsFragment"
+        android:name="com.example.huntingtoncafeonline.CustomizationsFragment"
+        android:label="fragment_customizations"
+        tools:layout="@layout/fragment_customizations" >
+        <action
+            android:id="@+id/action_customizationsFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.huntingtoncafeonline.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_grillFragment"
+            app:destination="@id/grillFragment" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_orderNumFragment"
+            app:destination="@id/orderNumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderNumFragment"
+        android:name="com.example.huntingtoncafeonline.OrderNumFragment"
+        android:label="fragment_order_num"
+        tools:layout="@layout/fragment_order_num" >
+        <action
+            android:id="@+id/action_orderNumFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
